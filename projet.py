@@ -33,15 +33,15 @@ def mean_value(rows):
 def select_full_path(datasets):
     full_path = ''
     if '2020' in datasets:
-        full_path = 'csv/full_2020.csv'
+        full_path = 'csv/2020.csv'
     elif '2019' in datasets:
-        full_path = 'csv/full_2019.csv'
+        full_path = 'csv/sample_2019.csv'
     elif '2018' in datasets:
-        full_path = 'csv/full_2018.csv'
+        full_path = 'csv/sample_2018.csv'
     elif '2017' in datasets:
-        full_path = 'csv/full_2017.csv'
+        full_path = 'csv/sample_2017.csv'
     elif '2016' in datasets:
-        full_path = 'csv/full_2016.csv'
+        full_path = 'csv/sample_2016.csv'
     return full_path
 
 def select_category(category):
@@ -225,10 +225,10 @@ def load_sale_research_data():
 
 @st.cache(allow_output_mutation=True)
 def load_main_data(full_path):   
-    df = pd.read_csv(full_path)
-    df_sample = df.sample(frac =.25)
-    df_sample_resize = df_sample[['date_mutation','numero_disposition','nature_mutation','type_local','nombre_pieces_principales','nombre_lots',
-    'surface_reelle_bati','surface_terrain','nature_culture','valeur_fonciere','nom_commune','longitude','latitude']].copy()
+    df_sample_resize = pd.read_csv(full_path)
+    #df_sample = df.sample(frac =.25)
+    #df_sample_resize = df_sample[['date_mutation','numero_disposition','nature_mutation','type_local','nombre_pieces_principales','nombre_lots',
+    #'surface_reelle_bati','surface_terrain','nature_culture','valeur_fonciere','nom_commune','longitude','latitude']].copy()
     df_sample_resize["date_mutation"] = pd.to_datetime(df_sample_resize["date_mutation"])
     df_sample_resize['year'] = df_sample_resize['date_mutation'].map(get_year)
     df_sample_resize['month'] = df_sample_resize['date_mutation'].map(get_month)
