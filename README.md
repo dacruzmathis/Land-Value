@@ -1,7 +1,7 @@
 # Land-Value
 
 The project consist of making a study using data of the land value dataset.  
-Master 1 project made for the Data Visualization cursus at Efrei Paris.
+Master 1 project made for the Data Visualization cursus at Efrei Paris.  
 Here some results obtained by the study of a dataset about Land value :
 
 ## France Landing 
