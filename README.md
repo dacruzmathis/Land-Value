@@ -1,6 +1,6 @@
 # Land-Value
 
-The project consist of making a study and a set of visualizations using data of the land value dataset.  
+The project consist to make a study and a set of visualizations using data of the land value dataset.  
 The solution is deployed on the interactive application streamlit.  
 Master 1 project made for the Data Visualization cursus at Efrei Paris.  
 Here some results obtained by the study of a dataset about Land value :
